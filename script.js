@@ -9,7 +9,14 @@ let numberButtons = Array.from(document.querySelectorAll('.number'));
 
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        displayValue.textContent = button.textContent;
+        console.log(displayValue.textContent + button.textContent);
+        if(displayValue.textContent == 0){ //or operator is pressed.
+            displayValue.textContent = button.textContent;
+        } else {
+            displayValue.textContent =  displayValue.textContent + button.textContent;
+        }
+
+        
     });
 });
 
